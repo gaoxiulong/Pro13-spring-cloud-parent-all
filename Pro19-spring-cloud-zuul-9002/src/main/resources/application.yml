@@ -1,0 +1,14 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: scms-zuul-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://www.eureka9000.com:7000/eureka,http://www.eureka9001.com:7001/eureka,http://www.eureka9002.com:7002/eureka
+    #http://www.eureka9000.com:7000/eureka,http://www.eureka9001.com:7001/eureka,http://www.eureka9002.com:7002/eureka
+    #http://localhost:7000/eureka,http://localhost:7001/eureka,http://localhost:7002/eureka
+    #http：//www.eureka7000.com:7000/eureka,http://www.eureka7001.com:7001/eureka,http://www.eureka7002.com:7002/eureka
