@@ -76,5 +76,6 @@
         <module>Pro17-spring-cloud-eureka-7001</module>
         <module>Pro17-spring-cloud-eureka-7002</module>
         <module>Pro15-spring-cloud-provider-hystrix-8004</module>
+        <module>Pro18-spring-cloud-hystrix-dashboard-9001</module>
     </modules>
 </project>

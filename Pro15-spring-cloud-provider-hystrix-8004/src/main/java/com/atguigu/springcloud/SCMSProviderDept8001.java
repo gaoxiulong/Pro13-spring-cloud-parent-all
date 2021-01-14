@@ -19,7 +19,7 @@ public class SCMSProviderDept8001 {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         System.out.println(applicationContext.getBean("dept"));
 
-        System.out.println("系统已经成功启动！");
+        System.out.println("Hystrix8004：系统已经成功启动！");
 
     }
 
