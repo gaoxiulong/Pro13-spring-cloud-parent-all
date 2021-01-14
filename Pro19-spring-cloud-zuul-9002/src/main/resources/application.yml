@@ -12,3 +12,11 @@ eureka:
     #http://www.eureka9000.com:7000/eureka,http://www.eureka9001.com:7001/eureka,http://www.eureka9002.com:7002/eureka
     #http://localhost:7000/eureka,http://localhost:7001/eureka,http://localhost:7002/eureka
     #http：//www.eureka7000.com:7000/eureka,http://www.eureka7001.com:7001/eureka,http://www.eureka7002.com:7002/eureka
+
+#zuul路由映射，安全作用。
+zuul:
+#  ignored-services: atguigu-scms-dept   #不能使用微服务的名称进行访问功能
+#  prefix: /good                         #加前缀才能访问
+  routes:
+    atguigu.serviceId: atguigu-scms-dept
+    atguigu.path: /zuul-scms/**
