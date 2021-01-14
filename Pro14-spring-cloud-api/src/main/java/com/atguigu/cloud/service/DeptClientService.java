@@ -1,6 +1,7 @@
 package com.atguigu.cloud.service;
 
 import com.atguigu.cloud.entities.Dept;
+import com.atguigu.cloud.service.factory.DeptClientServiceFallBackFactory;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -9,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
-@FeignClient(value = "Atguigu-SCMS-Dept")
+//value属性指定要调用的provider的微服务名称
+//fallbackFactory属性指定服务降级时使用的备选方案工厂
+@FeignClient(value = "Atguigu-SCMS-Dept",fallbackFactory = DeptClientServiceFallBackFactory.class)
 public interface DeptClientService {
 
     @RequestMapping(value="/dept/add", method= RequestMethod.POST)
