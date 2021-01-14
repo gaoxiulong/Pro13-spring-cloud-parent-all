@@ -1,0 +1,30 @@
+server:
+  port: 8004
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.atguigu.cloud.entities
+  mapper-locations:
+    - classpath:mybatis/mapper/*Mapper.xml
+
+spring:
+  application:
+    name: Atguigu-SCMS-Dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/cloud_db_three?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://www.eureka9000.com:7000/eureka,http://www.eureka9001.com:7001/eureka,http://www.eureka9002.com:7002/eureka
+      #http://www.eureka9000.com:7000/eureka,http://www.eureka9001.com:7001/eureka,http://www.eureka9002.com:7002/eureka
+    #http://localhost:7000/eureka,http://localhost:7001/eureka,http://localhost:7002/eureka
+    #www.eureka7000.com:7000/eureka,http://www.eureka7001.com:7001/eureka,http://www.eureka7002.com:7002/eureka
